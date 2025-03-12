@@ -91,7 +91,7 @@ const processImage = async () => {
 
   try {
     // Enviar la solicitud a la API
-    const result = await fetch("http://167.114.204.128/detect", {
+    const result = await fetch("https://api.galysa.com/detect", {
       method: "POST",
       body: formData,
     });
