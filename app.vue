@@ -91,7 +91,7 @@ const processImage = async () => {
 
   try {
     // Enviar la solicitud a la API
-    const result = await fetch("https://dev.galysa.com/modelocelulas/detect/", {
+    const result = await fetch("http://167.114.204.128/detect", {
       method: "POST",
       body: formData,
     });
