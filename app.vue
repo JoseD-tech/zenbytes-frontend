@@ -93,12 +93,7 @@ const processImage = async () => {
     // Enviar la solicitud a la API
 
     const result = await fetch("https://api.galysa.com/detect", {
-      mode: "cors",
       method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-        "Content-Type": "application/json",
-      },
       body: formData,
     });
 
