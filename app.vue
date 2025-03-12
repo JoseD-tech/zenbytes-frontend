@@ -1,4 +1,5 @@
 <script setup>
+import axios from "axios";
 import { ref, onBeforeUnmount } from "vue";
 
 // Datos iniciales
@@ -91,10 +92,15 @@ const processImage = async () => {
 
   try {
     // Enviar la solicitud a la API
-    const result = await fetch("https://api.galysa.com/detect", {
-      method: "POST",
-      body: formData,
+
+    const result = await axios.post("https://api.galysa.com/detect", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     });
+
+    console.log(result);
+    
 
     // Manejar errores de la respuesta
     if (!result.ok) {
